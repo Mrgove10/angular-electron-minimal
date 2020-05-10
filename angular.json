@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-electron-seed"
+    }
+  },
+  "defaultProject": "angular-electron-seed",
+  "cli": {
+    "analytics": false
+  }
 }
