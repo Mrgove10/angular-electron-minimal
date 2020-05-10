@@ -1,27 +1,43 @@
-# AngularElectronSeed
+# Angular Electron Seed Barebones
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+This project is a super barebones angular project with electron. It is a regular angular 9 app whit electron and event package it !
+The stack :
 
-## Development server
+- Angular 9.1 ([link](https://angular.io/))
+- Electron 8.2 ([link](https://www.electronjs.org/))
+- Electron Builder 22.6 ([link](https://www.electron.build/))
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [Angular Electron Seed Barebones](#angular-electron-seed-barebones)
+  - [Developpement](#developpement)
+    - [Website](#website)
+    - [Application](#application)
+  - [Building for production](#building-for-production)
+    - [Website](#website-1)
+    - [Application](#application-1)
 
-## Code scaffolding
+## Developpement
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+When possible you whould be developping in website mode. You will get hot reload and faster compiles times.
 
-## Build
+### Website
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+You can test and developpe your app as a website with ```$ npm run start``` then navigating to http://localhost:4200/
 
-## Running unit tests
+### Application
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To test in electron ```$ npm run electron```
 
-## Running end-to-end tests
+## Building for production
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Website
 
-## Further help
+If you want to export your app as a website you sure can !
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+You can run ```$ npm run build``` to do that, it will be exported to `/dist`
+
+### Application
+
+To build for the current platform you can run ```$ npm run electron:build```
+To build for every platform you can run ```$ npm run electron:build:all```
+
+the output app should be in the `/release` directory

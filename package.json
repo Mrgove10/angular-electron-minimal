@@ -9,18 +9,21 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "electron": "ng build --base-href ./ && tsc --p electron && electron .",
-    "electron:build": "ng build --base-href ./ && tsc --p electron && electron-builder",
-    "electron:build:all": "ng build --base-href ./ && tsc --p electron && electron-builder -mwl"
+    "electron:build": "ng build --base-href ./ --prod && tsc --p electron && electron-builder",
+    "electron:build:all": "ng build --base-href ./ --prod && tsc --p electron && electron-builder -mwl"
   },
   "build": {
     "appId": "com.example.app",
     "directories": {
       "output": "release"
+    },
+    "mac":{
+      "category" : "public.app-category.developer-tools"
     }
   },
   "main": "electron/dist/main.js",
