@@ -15,11 +15,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "electron": "ng build --base-href ./ && tsc --p electron && electron .",
-    "electron:build": "ng build --base-href ./ --prod && tsc --p electron && electron-builder",
-    "electron:build:all": "ng build --base-href ./ --prod && tsc --p electron && electron-builder -mwl"
+    "electron:build": "ng build --base-href ./ --prod && tsc --p electron && electron-builder --publish never",
+    "electron:build:all": "ng build --base-href ./ --prod && tsc --p electron && electron-builder -mwl --publish never"
   },
   "build": {
-    "publish": "never",
     "appId": "com.example.app",
     "directories": {
       "output": "release"

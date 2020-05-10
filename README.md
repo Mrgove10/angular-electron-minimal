@@ -5,9 +5,7 @@ This project is a super barebones angular project with electron. It is a regular
 ![Website Build](https://github.com/Mrgove10/angular-electron-minimal/workflows/Website%20Build/badge.svg)
 ![Application Build](https://github.com/Mrgove10/angular-electron-minimal/workflows/Application%20Build/badge.svg)
 
-|||
-|:-:|:-:|:-:|
-|![](https://angular.io/assets/images/logos/angular/angular.png =250x250)|![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1200px-Electron_Software_Framework_Logo.svg.png =250x250)
+![](https://angular.io/assets/images/logos/angular/angular.png =250x250) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1200px-Electron_Software_Framework_Logo.svg.png =250x250)
 
 The stack :
 
