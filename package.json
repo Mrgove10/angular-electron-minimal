@@ -1,6 +1,11 @@
 {
   "name": "angular-electron-seed",
-  "version": "0.0.0",
+  "description": "Angular whit electron seed",
+  "version": "1.0.0",
+  "author": {
+    "name": "Adrien R",
+    "url": "https://github.com/Mrgove10"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +13,15 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "electron": "ng build --base-href ./ && tsc --p electron && electron ."
+    "electron": "ng build --base-href ./ && tsc --p electron && electron .",
+    "electron:build": "ng build --base-href ./ && tsc --p electron && electron-builder",
+    "electron:build:all": "ng build --base-href ./ && tsc --p electron && electron-builder -mwl"
+  },
+  "build": {
+    "appId": "com.example.app",
+    "directories": {
+      "output": "release"
+    }
   },
   "main": "electron/dist/main.js",
   "private": true,
@@ -26,6 +39,7 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
+    "electron-builder": "^22.6.0",
     "@angular-devkit/build-angular": "~0.901.4",
     "@angular/cli": "~9.1.4",
     "@angular/compiler-cli": "~9.1.4",
