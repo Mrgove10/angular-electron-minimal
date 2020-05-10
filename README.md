@@ -1,6 +1,14 @@
 # Angular Electron Seed Barebones
 
 This project is a super barebones angular project with electron. It is a regular angular 9 app whit electron and event package it !
+
+![Website Build](https://github.com/Mrgove10/angular-electron-minimal/workflows/Website%20Build/badge.svg)
+![Application Build](https://github.com/Mrgove10/angular-electron-minimal/workflows/Application%20Build/badge.svg)
+
+|||
+|:-:|:-:|:-:|
+|![](https://angular.io/assets/images/logos/angular/angular.png =250x250)|![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1200px-Electron_Software_Framework_Logo.svg.png =250x250)
+
 The stack :
 
 - Angular 9.1 ([link](https://angular.io/))
@@ -23,6 +31,8 @@ When possible you whould be developping in website mode. You will get hot reload
 
 You can test and developpe your app as a website with ```$ npm run start``` then navigating to http://localhost:4200/
 
+To do a test build you can run ```$ npm run build```
+
 ### Application
 
 To test in electron ```$ npm run electron```
@@ -33,7 +43,7 @@ To test in electron ```$ npm run electron```
 
 If you want to export your app as a website you sure can !
 
-You can run ```$ npm run build``` to do that, it will be exported to `/dist`
+You can run ```$ npm run build:prod``` to do that, it will be exported to `/dist`
 
 ### Application
 

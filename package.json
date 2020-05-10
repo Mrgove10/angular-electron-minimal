@@ -9,7 +9,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build",
+    "build:prod": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -18,6 +19,7 @@
     "electron:build:all": "ng build --base-href ./ --prod && tsc --p electron && electron-builder -mwl"
   },
   "build": {
+    "publish": "never",
     "appId": "com.example.app",
     "directories": {
       "output": "release"
