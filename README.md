@@ -1,11 +1,15 @@
 # Angular Electron Seed Barebones
 
-This project is a super barebones angular project with electron. It is a regular angular 9 app whit electron and event package it !
+This project is a super barebones angular project with electron. It is a regular Angular 9 starter app (CSS styling) whit electron.
+You can package it with electron builder and github action for automated builds (Linux, Windows, Mac) are included.
 
 ![Website Build](https://github.com/Mrgove10/angular-electron-minimal/workflows/Website%20Build/badge.svg)
 ![Application Build](https://github.com/Mrgove10/angular-electron-minimal/workflows/Application%20Build/badge.svg)
 
-![](https://angular.io/assets/images/logos/angular/angular.png =250x250) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1200px-Electron_Software_Framework_Logo.svg.png =250x250)
+<p align="center">
+  <img src="https://angular.io/assets/images/logos/angular/angular.png">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/250px-Electron_Software_Framework_Logo.svg.png">
+</p>
 
 The stack :
 
@@ -24,6 +28,7 @@ The stack :
 ## Developpement
 
 When possible you whould be developping in website mode. You will get hot reload and faster compiles times.
+Warning : if you clone this repo and then push on github, the build actions will be activated.
 
 ### Website
 

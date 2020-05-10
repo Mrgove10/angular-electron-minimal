@@ -35,7 +35,7 @@ jobs:
       - name: Artifact creation
         uses: actions/upload-artifact@v1
         with:
-          name: Application Build Artifact Linux
+          name: Application Linux
           path: release/
   
   build-windows:
@@ -68,7 +68,7 @@ jobs:
       - name: Artifact creation
         uses: actions/upload-artifact@v1
         with:
-          name: Application Build Artifact Windows
+          name: Application Windows
           path: release/
 
   build-macos:
@@ -101,5 +101,5 @@ jobs:
       - name: Artifact creation
         uses: actions/upload-artifact@v1
         with:
-          name: Application Build Artifact MacOs
+          name: Application MacOs
           path: release/
