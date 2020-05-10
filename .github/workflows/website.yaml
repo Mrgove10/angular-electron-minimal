@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: ng build
+      - name: Angular build
         run: |
           npm ci
           npm run build
@@ -35,5 +35,5 @@ jobs:
       - name: Artifact creation
         uses: actions/upload-artifact@v1
         with:
-          name: Build Artifact
+          name: Website Build Artifact
           path: dist/

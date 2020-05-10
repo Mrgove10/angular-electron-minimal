@@ -1,11 +1,11 @@
-name: Website Build
+name: Application Build
 on:
   push:
     branches:
       - master
 
 jobs:
-  build:
+  build-linux:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -27,13 +27,79 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: ng build
+      - name: Electron build
         run: |
           npm ci
-          npm run electron:build:all
+          npm run electron:build
 
       - name: Artifact creation
         uses: actions/upload-artifact@v1
         with:
-          name: Build Artifact
+          name: Application Build Artifact Linux
+          path: release/
+  
+  build-windows:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Electron build
+        run: |
+          npm ci
+          npm run electron:build
+
+      - name: Artifact creation
+        uses: actions/upload-artifact@v1
+        with:
+          name: Application Build Artifact Windows
+          path: release/
+
+  build-macos:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Electron build
+        run: |
+          npm ci
+          npm run electron:build
+
+      - name: Artifact creation
+        uses: actions/upload-artifact@v1
+        with:
+          name: Application Build Artifact MacOs
           path: release/
