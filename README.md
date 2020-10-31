@@ -13,9 +13,9 @@ You can package it with electron builder and github action for automated builds 
 
 The stack :
 
-- Angular 9.1 ([link](https://angular.io/))
-- Electron 8.2 ([link](https://www.electronjs.org/))
-- Electron Builder 22.6 ([link](https://www.electron.build/))
+- Angular 10 ([link](https://angular.io/))
+- Electron 10 ([link](https://www.electronjs.org/))
+- Electron Builder 22.9 ([link](https://www.electron.build/))
 
 - [Angular Electron Seed Barebones](#angular-electron-seed-barebones)
   - [Developpement](#developpement)
