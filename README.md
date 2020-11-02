@@ -1,6 +1,6 @@
 # Angular Electron Seed Barebones
 
-This project is a super barebones angular project with electron. It is a regular Angular 9 starter app (CSS styling) whit electron.
+This project is a super barebones angular project with electron. It is a regular Angular 10 starter app (CSS styling) whit electron.
 You can package it with electron builder and github action for automated builds (Linux, Windows, Mac) are included.
 
 ![Website Build](https://github.com/Mrgove10/angular-electron-minimal/workflows/Website%20Build/badge.svg)
