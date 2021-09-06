@@ -10,13 +10,13 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --prod",
+    "build:prod": "ng build --configuration production",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "electron": "ng build --base-href ./ && tsc --p electron && electron .",
-    "electron:build": "ng build --base-href ./ --prod && tsc --p electron && electron-builder --publish never",
-    "electron:build:all": "ng build --base-href ./ --prod && tsc --p electron && electron-builder -mwl --publish never"
+    "electron:build": "ng build --base-href ./ --configuration production && tsc --p electron && electron-builder --publish never",
+    "electron:build:all": "ng build --base-href ./ --configuration production && tsc --p electron && electron-builder -mwl --publish never"
   },
   "build": {
     "appId": "com.example.app",
@@ -30,30 +30,30 @@
   "main": "electron/dist/main.js",
   "private": true,
   "dependencies": {
-    "@angular/animations": "~11.2.13",
-    "@angular/common": "~11.2.13",
-    "@angular/compiler": "~11.2.13",
-    "@angular/core": "~11.2.13",
-    "@angular/forms": "~11.2.13",
-    "@angular/platform-browser": "~11.2.13",
-    "@angular/platform-browser-dynamic": "~11.2.13",
-    "@angular/router": "~11.2.13",
+    "@angular/animations": "~12.2.4",
+    "@angular/common": "~12.2.4",
+    "@angular/compiler": "~12.2.4",
+    "@angular/core": "~12.2.4",
+    "@angular/forms": "~12.2.4",
+    "@angular/platform-browser": "~12.2.4",
+    "@angular/platform-browser-dynamic": "~12.2.4",
+    "@angular/router": "~12.2.4",
     "rxjs": "~6.6.3",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1102.12",
-    "@angular/cli": "~11.2.12",
-    "@angular/compiler-cli": "~11.2.13",
-    "@angular/language-service": "~11.2.13",
+    "@angular-devkit/build-angular": "~12.2.4",
+    "@angular/cli": "~12.2.4",
+    "@angular/compiler-cli": "~12.2.4",
+    "@angular/language-service": "~12.2.4",
     "@types/electron": "^1.6.10",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "^12.11.1",
+    "@types/node": "^16.7.10",
     "codelyzer": "^6.0.0",
-    "electron": "^12.0.6",
-    "electron-builder": "^22.11.1",
+    "electron": "^14.0.0",
+    "electron-builder": "^22.11.7",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~6.3.2",
@@ -64,6 +64,6 @@
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.0.5"
+    "typescript": "~4.3.5"
   }
 }
